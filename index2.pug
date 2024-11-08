@@ -1,0 +1,19 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title
+  body
+     - // tag ekleme
+     h1#pageTitle Page Title Goes Here 
+     
+     - // sinif ekleme
+     h2.sinif Classlar
+     .display-box 
+
+     //-  attribute ekleme
+     input(type='text' name="ad" data-js=`${5 < 7 ? 'OK' : 'Not ok'}`) 
+
+     - //degisken tanimlama
+     - const myClasses = ['class1', 'class2', 'class3'] 
+     div(class=['class1', 'class2', 'class3'])
