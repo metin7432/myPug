@@ -1,16 +1,15 @@
 doctype
 html(lang='en')
-  head
-    meta(charset='utf-8')
-    title
-  body
-      div(class=['my-div', 'class1', 'class2', 'class3']) kisim1
-       div.my-div(class=[ 'class1', 'class2', 'class3']) kisim2
-       -// -----------------------------------------
-       hr
-       - // inline style tanimlama
-       - const myStyles = {'color':'red','background-color': 'blue'}
-       div(style=myStyles) Kirmizi
-       div(style={'color': 'blue','background-color': 'red'}) Mavi 
-       -// ------------------------
-       hr
+    head
+        meta(charset='utf-8')
+        title Movie List
+    body
+      form(action="/movie/save" method="post")
+          input(type="hidden", name="id")
+          div 
+           label(for="title") Title
+           input(type="text", name="title")  
+          
+           label(for="id") Year 
+           input(type="text")  
+           button(type="submit") Submit

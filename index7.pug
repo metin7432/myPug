@@ -1,0 +1,26 @@
+mixin comment(commentData)
+    .comment 
+          if commentData.postedByAdmin
+             em (Posted by admin)
+          .date= commentData.date
+          .author= commentData.author
+          .text=  commentData.text
+
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title
+    style. 
+       .comment{
+        color: blue
+      }
+        .date {color: red}
+  body
+    -// include includes/head
+     hr
+     .comment 
+     - const c1 = {postedByAdmin: true, date: '04/02/1974', author: 'dcode', text: 'Lorem ipsum dolor sit amet.'}
+     + comment(c1)  
+     - const c2 = {postedByAdmin: true, date: '05/02/2074', author: 'metin', text: 'Lorem ipsum dolor sit amet.'} 
+     +comment(c2)  

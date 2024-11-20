@@ -1,0 +1,21 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel="stylesheet", href="style.css")
+    title 'Deneme Yanilma'
+    style. 
+        p {
+          color:red;
+          text-decoration: underline
+        }
+  body
+    - const pStyles ={'text-align': 'center', 'text-transform':'uppercase'}
+    p(style=pStyles) Lorem ipsum dolor sit amet.
+      -  const grades = {"web dev":98, "Software Desing":89}
+      - // each ve for hem diziler; hemde objeleri loop eder
+      -//each n, i in [] 
+    each n, i in grades
+       p= n + " - " + i
+    else 
+        strong No vaues here

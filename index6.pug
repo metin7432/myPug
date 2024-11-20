@@ -1,0 +1,19 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title
+  body
+     - const orderStatus = 'inTrafnsit'
+     case orderStatus 
+        when 'pending'
+          p Siparis bekleniyor 
+
+        when 'inTransit'
+          p kargolandi 
+
+        when 'completed'
+          p teslim edildi    
+
+        default 
+            p bunlardan hicbiri degil
